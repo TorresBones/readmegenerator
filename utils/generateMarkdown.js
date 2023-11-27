@@ -14,9 +14,6 @@ function renderLicenseLink(license) {
   return "";
 }
 
-// TODO: Create a function that returns the license section of README
-function renderLicenseSection(license) {}
-
 // Creating a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
