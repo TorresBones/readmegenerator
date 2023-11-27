@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+//Including packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
 const generateMarkdown = require("../readmegenerator/utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+//Creating an array of questions for user input
 const questions = [
     {
         type: "input",
@@ -30,7 +30,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Select a license applicable to the project.",
-        choices: ["MIT", "", "", "",],
+        choices: ["MIT", "APACHE 2.0", "BOOST1.0", "MPL2.0", "BSD3", "N/A"],
     },
     {
         type: "input",
@@ -54,21 +54,27 @@ const questions = [
     },
     {
         type: "input",
+        name: "contributors",
+        message: "List any contributors(Use GitHub usernames)"
+    },
+    {
+        type: "input",
         name: "test",
         message: "Provide walkthrough of require test if applicable.",
+        default: "",
     },
 ];
 
-// TODO: Create a function to write README file
+// Creating a function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// TODO: Create a function to initialize app
+// Creating a function to initialize app
 function init() {
     inquirer.prompt(questions).then((responses) => {
         console.log("Creating Professional ReadMe File...");
-        writeToFile("./dist/README.md", generateMarkdown({...responses}));
+        writeToFile("./CreatedFiles/README.md", generateMarkdown({...responses}));
     })
 }
 
