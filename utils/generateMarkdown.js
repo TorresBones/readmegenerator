@@ -6,8 +6,13 @@ function renderLicenseBadge(license) {
   return "";
 }
 
-// TODO: Create a function that returns the license link
-function renderLicenseLink(license) {}
+// Creating a function that returns the license link
+function renderLicenseLink(license) {
+  if (license !== "NONE") {
+    return `[License Link](https://opensource.org/licenses/${license})`;
+  }
+  return "";
+}
 
 // TODO: Create a function that returns the license section of README
 function renderLicenseSection(license) {}
@@ -15,19 +20,19 @@ function renderLicenseSection(license) {}
 // Creating a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
+  ${renderLicenseLink(data.license)}
   ## Description
   ${data.description}
   ## Deployed Application URL
   ${data.link}
   ## Screenshot
-  ![alt.text] (${data.screenshot})
+  ![alt.text](${data.screenshot})
   ## Table of Contents
-  * [Languages & Dependencies] (#LanguagesAndDependencies)
-  * [How to use this application] (#HowToUseThisApplication)
-  * [Contributors] (#Contributors)
-  * [Testing] (#Testing)
-  * [Question] (#Questions)
+  * [Languages & Dependencies](#LanguagesAndDependencies)
+  * [How to use this application](#HowToUseThisApplication)
+  * [Contributors](#Contributors)
+  * [Testing](#Testing)
+  * [Question](#Questions)
   ## Languages and Dependencies
   ${data.require}
   ## How to use this application
@@ -37,7 +42,7 @@ function generateMarkdown(data) {
   ## Testing
   ${data.test}
   ## Question
-  Send your questions [here] (mailto:${data.email}?subject=[Github]%20Dev%20Connect) or visit [github/${data.creator}](https://github.com/${data.creator}).
+  Send your questions to ${data.email} or visit [github/${data.creator}](https://github.com/${data.creator}).
 
 `;
 }
