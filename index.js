@@ -18,7 +18,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "screenshot",
+        name: "screenshot/demo",
         message: "Provide a relative path to the image you want to use as your screenshot.",
     },
     {

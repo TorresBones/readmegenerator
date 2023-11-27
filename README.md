@@ -5,7 +5,7 @@
   ## Deployed Application URL
   N/A
   ## Screenshot
-  ![alt.text](N/A)
+  ![alt.text](readmegenerator\Demo\DemoREADMEGenerator.webm)
   ## Table of Contents
   * [Languages & Dependencies](#LanguagesAndDependencies)
   * [How to use this application](#HowToUseThisApplication)

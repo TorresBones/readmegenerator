@@ -22,7 +22,7 @@ function generateMarkdown(data) {
   ${data.description}
   ## Deployed Application URL
   ${data.link}
-  ## Screenshot
+  ## Screenshot or Demo
   ![alt.text](${data.screenshot})
   ## Table of Contents
   * [Languages & Dependencies](#LanguagesAndDependencies)
